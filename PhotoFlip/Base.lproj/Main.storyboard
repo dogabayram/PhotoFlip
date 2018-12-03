@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,123 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoFlip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVn-kV-Mdc" userLabel="verticalFlip">
+                                <rect key="frame" x="15" y="552" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FBX-ej-jAU"/>
+                                    <constraint firstAttribute="width" constant="50" id="seX-Ax-CGW"/>
+                                </constraints>
+                                <state key="normal" image="flip"/>
+                                <connections>
+                                    <action selector="flipHorizontalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S3g-5j-hLM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuL-6H-ejb" userLabel="galleryStore">
+                                <rect key="frame" x="15" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TS2-74-mD1"/>
+                                    <constraint firstAttribute="width" constant="50" id="nPp-rF-Oef"/>
+                                </constraints>
+                                <state key="normal" image="gallery"/>
+                                <connections>
+                                    <action selector="galleryPickerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VDm-a2-KR4"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hcZ-0e-Ccb">
+                                <rect key="frame" x="16" y="80" width="343" height="462"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pM-b9-tCd">
+                                <rect key="frame" x="330" y="30" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HO3-Ow-a52"/>
+                                    <constraint firstAttribute="width" constant="30" id="Tff-Ah-jD9"/>
+                                </constraints>
+                                <state key="normal" image="down-arrow-download-button"/>
+                                <connections>
+                                    <action selector="saveImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Orf-b4-gVp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29L-9y-iCE" userLabel="horizonFlip">
+                                <rect key="frame" x="310" y="552" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="A18-U3-95g"/>
+                                    <constraint firstAttribute="height" constant="50" id="TFy-D1-Bci"/>
+                                </constraints>
+                                <state key="normal" image="flip2"/>
+                                <connections>
+                                    <action selector="flipVerticalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aIg-4B-3bk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6T-hA-inz" userLabel="cameraButton">
+                                <rect key="frame" x="162.5" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="bt8-oL-n9J"/>
+                                    <constraint firstAttribute="height" constant="50" id="pL8-Pw-wom"/>
+                                </constraints>
+                                <state key="normal" image="photo-camera (1)"/>
+                                <connections>
+                                    <action selector="cameraPickerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xHA-Wb-EWG"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVf-LG-3GV">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4sG-ui-15G"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Photo To Flip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHA-pE-oSN">
+                                <rect key="frame" x="54" y="316.5" width="267" height="34.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-HeavyItalic" family="Avenir Next" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8pM-b9-tCd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="1Rd-RD-jXg"/>
+                            <constraint firstItem="oVf-LG-3GV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6KT-uh-9ll"/>
+                            <constraint firstItem="s6T-hA-inz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="83g-t3-mpE"/>
+                            <constraint firstItem="sVn-kV-Mdc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="8hr-ev-bVJ"/>
+                            <constraint firstItem="oVf-LG-3GV" firstAttribute="top" secondItem="29L-9y-iCE" secondAttribute="bottom" constant="15" id="GoF-jW-jBi"/>
+                            <constraint firstItem="hcZ-0e-Ccb" firstAttribute="top" secondItem="OuL-6H-ejb" secondAttribute="bottom" constant="10" id="OVf-LI-K42"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hcZ-0e-Ccb" secondAttribute="trailing" constant="16" id="RtP-rK-RHJ"/>
+                            <constraint firstAttribute="bottom" secondItem="oVf-LG-3GV" secondAttribute="bottom" id="Vn0-Ra-F2u"/>
+                            <constraint firstItem="oVf-LG-3GV" firstAttribute="top" secondItem="sVn-kV-Mdc" secondAttribute="bottom" constant="15" id="W9C-H6-hc5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="29L-9y-iCE" secondAttribute="trailing" constant="15" id="ahw-bB-0OD"/>
+                            <constraint firstItem="sVn-kV-Mdc" firstAttribute="top" secondItem="hcZ-0e-Ccb" secondAttribute="bottom" constant="10" id="aq1-FF-kqE"/>
+                            <constraint firstItem="OuL-6H-ejb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="bob-sG-Xc9"/>
+                            <constraint firstItem="MHA-pE-oSN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="g7I-6S-Oed"/>
+                            <constraint firstItem="oVf-LG-3GV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gah-Mv-QHR"/>
+                            <constraint firstItem="s6T-hA-inz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mST-6b-gOv"/>
+                            <constraint firstItem="OuL-6H-ejb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mji-hE-rb4"/>
+                            <constraint firstItem="hcZ-0e-Ccb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yGy-km-cjU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8pM-b9-tCd" secondAttribute="trailing" constant="15" id="zEb-m4-4jI"/>
+                            <constraint firstItem="MHA-pE-oSN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zzp-H9-Mpl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bannerView" destination="oVf-LG-3GV" id="eMT-s9-4zv"/>
+                        <outlet property="choosePhotoLabel" destination="MHA-pE-oSN" id="VkC-4s-F1H"/>
+                        <outlet property="imageView" destination="hcZ-0e-Ccb" id="DqB-ZA-LEb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="down-arrow-download-button" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="flip" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="flip2" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="gallery" width="384" height="384"/>
+        <image name="photo-camera (1)" width="44.737865447998047" height="44.737865447998047"/>
+    </resources>
 </document>
