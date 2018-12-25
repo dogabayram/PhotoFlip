@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7477B693AA5F99826719D8A8 /* Pods_PhotoFlip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67390FD13E8057CF48F7D30 /* Pods_PhotoFlip.framework */; };
 		C582533D21B3453F00BA30B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C582533C21B3453F00BA30B8 /* AppDelegate.swift */; };
 		C582533F21B3453F00BA30B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C582533E21B3453F00BA30B8 /* ViewController.swift */; };
 		C582534221B3453F00BA30B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C582534021B3453F00BA30B8 /* Main.storyboard */; };
 		C582534421B3453F00BA30B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C582534321B3453F00BA30B8 /* Assets.xcassets */; };
 		C582534721B3453F00BA30B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C582534521B3453F00BA30B8 /* LaunchScreen.storyboard */; };
+		C582539221B4AC5000BA30B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C582539121B4AC5000BA30B8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B67390FD13E8057CF48F7D30 /* Pods_PhotoFlip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoFlip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB5E65EACF720630DAE0EC0A /* Pods-PhotoFlip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoFlip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoFlip/Pods-PhotoFlip.debug.xcconfig"; sourceTree = "<group>"; };
 		C582533921B3453F00BA30B8 /* PhotoFlip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFlip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C582533C21B3453F00BA30B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C582533E21B3453F00BA30B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		C582534321B3453F00BA30B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C582534621B3453F00BA30B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C582534821B3453F00BA30B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C582539121B4AC5000BA30B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		FFE7F7C0F7E9BCC368120A60 /* Pods-PhotoFlip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoFlip.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoFlip/Pods-PhotoFlip.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7477B693AA5F99826719D8A8 /* Pods_PhotoFlip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		020D1978A9FD6E0DCE54668E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B67390FD13E8057CF48F7D30 /* Pods_PhotoFlip.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C582533021B3453F00BA30B8 = {
 			isa = PBXGroup;
 			children = (
 				C582533B21B3453F00BA30B8 /* PhotoFlip */,
 				C582533A21B3453F00BA30B8 /* Products */,
+				FAF71FFB79EE2FAC18A8C209 /* Pods */,
+				020D1978A9FD6E0DCE54668E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +77,18 @@
 				C582534321B3453F00BA30B8 /* Assets.xcassets */,
 				C582534521B3453F00BA30B8 /* LaunchScreen.storyboard */,
 				C582534821B3453F00BA30B8 /* Info.plist */,
+				C582539121B4AC5000BA30B8 /* GoogleService-Info.plist */,
 			);
 			path = PhotoFlip;
+			sourceTree = "<group>";
+		};
+		FAF71FFB79EE2FAC18A8C209 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB5E65EACF720630DAE0EC0A /* Pods-PhotoFlip.debug.xcconfig */,
+				FFE7F7C0F7E9BCC368120A60 /* Pods-PhotoFlip.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C582534B21B3453F00BA30B8 /* Build configuration list for PBXNativeTarget "PhotoFlip" */;
 			buildPhases = (
+				4679C5496B4421100D0F731E /* [CP] Check Pods Manifest.lock */,
 				C582533521B3453F00BA30B8 /* Sources */,
 				C582533621B3453F00BA30B8 /* Frameworks */,
 				C582533721B3453F00BA30B8 /* Resources */,
+				E4BDA17CF9950C7ACE45AD32 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +125,14 @@
 				TargetAttributes = {
 					C582533821B3453F00BA30B8 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -123,12 +160,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				C582534721B3453F00BA30B8 /* LaunchScreen.storyboard in Resources */,
+				C582539221B4AC5000BA30B8 /* GoogleService-Info.plist in Resources */,
 				C582534421B3453F00BA30B8 /* Assets.xcassets in Resources */,
 				C582534221B3453F00BA30B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4679C5496B4421100D0F731E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotoFlip-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4BDA17CF9950C7ACE45AD32 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PhotoFlip/Pods-PhotoFlip-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoFlip/Pods-PhotoFlip-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C582533521B3453F00BA30B8 /* Sources */ = {
@@ -280,16 +359,19 @@
 		};
 		C582534C21B3453F00BA30B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB5E65EACF720630DAE0EC0A /* Pods-PhotoFlip.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K3G4Z22GEP;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PhotoFlip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.d0gabayram.PhotoFlip;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dogabayram.FlipPhoto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,16 +380,19 @@
 		};
 		C582534D21B3453F00BA30B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFE7F7C0F7E9BCC368120A60 /* Pods-PhotoFlip.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K3G4Z22GEP;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PhotoFlip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.d0gabayram.PhotoFlip;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dogabayram.FlipPhoto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
